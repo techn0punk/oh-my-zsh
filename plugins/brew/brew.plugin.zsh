@@ -1,3 +1,6 @@
+alias bres='brew search'
+alias brewi='brew install'
+alias brewupgrade='brew update && brew upgrade'
 alias brewp='brew pin'
 alias brews='brew list -1'
 alias brewsp='brew list --pinned'
