@@ -18,6 +18,9 @@ fi
 ## jobs
 setopt long_list_jobs
 
+## editor
+env_default EDITOR vim
+
 ## pager
 env_default PAGER 'less'
 env_default LESS '-R'
