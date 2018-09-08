@@ -24,13 +24,15 @@ main() {
   # which may fail on systems lacking tput or terminfo
   set -e
 
+  mkdir -p $HOME/.config
+
   if ! command -v zsh >/dev/null 2>&1; then
     printf "${YELLOW}Zsh is not installed!${NORMAL} Please install zsh first!\n"
     exit
   fi
 
   if [ ! -n "$ZSH" ]; then
-    ZSH=~/.oh-my-zsh
+    ZSH=~/.config/oh-my-zsh
   fi
 
   if [ -d "$ZSH" ]; then
@@ -59,7 +61,7 @@ main() {
       exit 1
     fi
   fi
-  env git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git "$ZSH" || {
+  env git clone --depth=1 https://github.com/techn0punk/oh-my-zsh.git "$ZSH" || {
     printf "Error: git clone of oh-my-zsh repo failed\n"
     exit 1
   }
